@@ -1,0 +1,42 @@
+.imageCarousel-imageWrapper {
+  min-height: 300px;
+  overflow: hidden;
+  position: relative;
+}
+
+.sliding img {
+  position: absolute;
+}
+
+
+/*   Transitions   */
+.slide {
+  -webkit-animation-duration: 500ms;
+}
+
+.slide.in {
+  -webkit-animation-name: slideinfromright;
+}
+.slide.out {
+  -webkit-animation-name: slideouttoleft;
+}
+
+@-webkit-keyframes slideinfromright {
+  0% {
+    -webkit-transform: translate3d(100%, 0, 0);
+  }
+
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+}
+
+@-webkit-keyframes slideouttoleft {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+  }
+}
