@@ -5,7 +5,7 @@ CSS Image Carousel
 ### A CSS transition image carousel.
 Current only supports webkit.
 
-It allows the user to tap thumbnails to show a larger view to slide into the main view. This is a progressively enhancement, as shown in the markup below.
+It allows the user to tap thumbnails to slide into a larger view. This is a progressively enhancement, as shown in the markup below.
 
 #### To initialize
 ```
