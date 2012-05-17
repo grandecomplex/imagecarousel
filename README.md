@@ -7,6 +7,9 @@ Current only supports webkit.
 
 It allows the user to tap thumbnails to slide into a larger view. This is a progressively enhancement, as shown in the markup below.
 
+### Dependency
+jQuery
+
 #### To initialize
 ```
 var carousel = new ImageCarousel();
