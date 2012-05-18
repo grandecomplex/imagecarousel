@@ -7,9 +7,7 @@ window.ImageCarousel = (function() {
     this.$imageWrapper = $( options.imageWrapper || ".imageCarousel-imageWrapper" );
     this.addEvents();
   };
-  
-  utils.inherits(ImageCarousel, Page);
-  
+    
   // TODO: Once integrating modernizr, this will determine what kind of animation to do depending on CSS transforms
   ImageCarousel.prototype.changeFactory = function(e) {
     var element = $(e.target).parent("a");
