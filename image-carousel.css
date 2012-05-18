@@ -4,6 +4,10 @@
   position: relative;
 }
 
+.imageCarousel-imageWrapper img {
+  -webkit-transform: translate3d(0, 0, 0);
+}
+
 .sliding img {
   position: absolute;
 }
@@ -12,6 +16,7 @@
 /*   Transitions   */
 .slide {
   -webkit-animation-duration: 500ms;
+  -webkit-timing-function: cubic-bezier(0.42, 0, 0.58, 1.0);
 }
 
 .slide.in {
