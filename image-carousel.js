@@ -1,6 +1,6 @@
 // TODO: feature detect with modernizr
 window.ImageCarousel = (function() {
-
+  var timer = 0;
   var ImageCarousel = function(options) {
     options = options || {};
     this.$thumbWrapper = $( options.thumbWrapper || ".imageCarousel-thumbWrapper" );
@@ -23,7 +23,13 @@ window.ImageCarousel = (function() {
   };
   
   ImageCarousel.prototype.removeElement = function() {
-    this.$imageWrapper.find("img.out").remove();
+    clearTimeout(timer);
+    timer = setTimeout(function() {
+      var imgGarbage = this.$imageWrapper.find("img.out");
+      if (imgGarbage.length >= 2) {
+        this.$imageWrapper.find("img.out").remove();
+      } 
+    }.bind(this), 1500);
   };
   
   ImageCarousel.prototype.show = function(el) {
