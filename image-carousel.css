@@ -2,6 +2,8 @@
   min-height: 300px;
   overflow: hidden;
   position: relative;
+  opacity: 0;
+  -webkit-transition: opacity .4s linear;
 }
 
 .imageCarousel-imageWrapper img {
@@ -10,19 +12,21 @@
 
 .sliding img {
   position: absolute;
+  -webkit-animation-duration: 600ms;
+  -webkit-timing-function: cubic-bezier(0.42, 0, 0.58, 1.0);
+}
+
+/*  Must set a .no-js on your own  */
+.no-js .imageCarousel-imageWrapper {
+  opacity: 1;
 }
 
 
 /*   Transitions   */
-.slide {
-  -webkit-animation-duration: 500ms;
-  -webkit-timing-function: cubic-bezier(0.42, 0, 0.58, 1.0);
-}
-
-.slide.in {
+.sliding .in {
   -webkit-animation-name: slideinfromright;
 }
-.slide.out {
+.sliding .out {
   -webkit-animation-name: slideouttoleft;
 }
 
