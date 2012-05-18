@@ -24,7 +24,7 @@ window.ImageCarousel = (function() {
   
   ImageCarousel.prototype.removeElement = function() {
     this.$imageWrapper.find("img.out").remove();
-  }
+  };
   
   ImageCarousel.prototype.show = function(el) {
     var href = el.attr("href");
@@ -32,16 +32,17 @@ window.ImageCarousel = (function() {
   };
   
   ImageCarousel.prototype.slide = function(el) {
+    var that = this;
     var href = el.attr("href");
     var img = document.createElement("img");
-    
-    img.setAttribute("src", href);
-    $(img).addClass("in slide");
+    img.addEventListener("load", function(e) {
+      $(img).addClass("in slide");
+      that.$imageWrapper.addClass("sliding");
+      that.$imageWrapper.find("img").addClass("out slide").removeClass("in");
 
-    this.$imageWrapper.addClass("sliding");
-    this.$imageWrapper.find("img").addClass("out slide");
-    
-    this.$imageWrapper.append(img);
+      that.$imageWrapper.append(img);
+    });
+    img.setAttribute("src", href);
   };
   
   ImageCarousel.prototype.removeEvents = function() {
