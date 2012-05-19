@@ -27,9 +27,9 @@ window.ImageCarousel = (function() {
   ImageCarousel.prototype.removeElement = function() {
     clearTimeout(timer);
     timer = setTimeout(function() {
-      var imgGarbage = this.$imageWrapper.find("img.out");
-      if (imgGarbage.length >= 1) {
-        this.$imageWrapper.find("img.out").remove();
+      var $imgGarbage = this.$imageWrapper.find("img.out");
+      if ($imgGarbage.length >= 1) {
+        $imgGarbage.remove();
       } 
     }.bind(this), 1500);
 
