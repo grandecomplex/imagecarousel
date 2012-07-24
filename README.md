@@ -10,14 +10,12 @@ Degrades if webkit isn't available.
 
 Degrades if no javascript.
 
-Requires Modernizr. 
-
 It allows the user to tap thumbnails to slide into a larger view. This is a progressively enhancement, as shown in the markup below.
 
 Sorry for the lack of documentation. If you actually use this and don't personally know me, email me and I'll help.
 
 ### Dependency
-jQuery
+jQuery, Modernizr
 
 #### To initialize
 ```
