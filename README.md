@@ -3,7 +3,14 @@ CSS Image Carousel
 =========
 
 ### A CSS transition image carousel.
-Current only supports webkit.
+
+Allows for responsive width carousel.
+
+Degrades if webkit isn't available.
+
+Degrades if no javascript.
+
+Requires Modernizr. 
 
 It allows the user to tap thumbnails to slide into a larger view. This is a progressively enhancement, as shown in the markup below.
 
